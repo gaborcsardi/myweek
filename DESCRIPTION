@@ -18,3 +18,5 @@ Imports:
 Suggests:
   covr,
   testthat
+Remotes:
+  r-lib/gh
