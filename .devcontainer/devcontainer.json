@@ -15,5 +15,13 @@
             "type": "bind"
         }
     ],
-    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}"
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "features": {
+        "ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": ["REditorSupport.r"]
+        }
+    }
 }
