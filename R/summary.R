@@ -71,7 +71,9 @@ commits_pushed <- function(evts) {
       sha = map_chr(cmts, "sha")
     )
   }))
-  cp <- cp[order(cp$repo), ]
+  if (nrow(cp) > 0) {
+    cp <- cp[order(cp$repo), ]
+  }
   add_class(cp, "commits_pushed")
 }
 
