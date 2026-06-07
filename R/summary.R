@@ -61,7 +61,7 @@ issues_closed <- function(evts) {
 }
 
 commits_pushed <- function(evts) {
-  pss <- keep(evts, \(x) x$type == "PushEvent")
+  pss <- keep(evts, \(x) x$type == "PushEvent" && length(x$payload$commits) > 0)
   cp <- list_rbind(map(pss, function(ev) {
     cmts <- rev(ev$payload$commits)
     data.frame(
